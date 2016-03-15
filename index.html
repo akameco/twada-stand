@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>テスト書いてない</title>
+	<style>
+		html,body,#main {
+			width: 100%;
+			height: 100%;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			transform-origin: center center; 
+			animation: bigger 2s ease-in;
+		}
+		@keyframes bigger {
+			0% {
+				transform: scale(0.5);
+			}
+			100% {
+				transform: scale(1.5);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="main"></div>
+	<script src="./index.js"></script>
+</body>
+</html>

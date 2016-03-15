@@ -1,0 +1,17 @@
+{
+  "name": "t-wada-stand",
+  "version": "0.0.1",
+  "description": "テスト書いてないとかお前それ@t-wadaの前で同じこと言えんの",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "akameco <akameco.t@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "electron-prebuilt": "^0.37.2"
+  },
+  "xo": {
+    "envs": ["browser"]
+  }
+}
