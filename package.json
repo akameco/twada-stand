@@ -4,14 +4,29 @@
   "description": "テスト書いてないとかお前それ@t-wadaの前で同じこと言えんの",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "clean": "rimraf dist",
+    "copy": "cpx '{*.html,package.json,*.png,*.css,index.js}' dist",
+    "build": "npm-run-all -s clean copy build:main",
+    "build:main": "browserify main.js --im --no-detect-globals --node -o ./dist/main.js",
+    "release": "npm-run-all -s build release:*",
+    "release:osx": "electron-packager ./dist twada-stand --out=./release --platform=darwin --arch=x64 --version=0.37.2 --overwrite --asar",
+    "release:win": "electron-packager ./dist twada-stand --out=./release --platform=win32 --arch=x64 --version=0.37.2 --overwrite --asar"
   },
   "author": "akameco <akameco.t@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "electron-prebuilt": "^0.37.2"
+    "browserify": "^13.0.0",
+    "cpx": "^1.3.1",
+    "electron-packager": "^5.2.1",
+    "electron-prebuilt": "^0.37.2",
+    "npm-run-all": "^1.5.3",
+    "rimraf": "^2.5.2",
+    "xo": "*"
   },
   "xo": {
-    "envs": ["browser"]
+    "envs": [
+      "browser"
+    ]
   }
 }
