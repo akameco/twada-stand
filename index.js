@@ -1,21 +1,17 @@
 'use strict';
-
 const speech = new webkitSpeechRecognition(); // eslint-disable-line
 speech.lang = 'ja-JP';
-speech.onerror = (ev) => {
+speech.onend = () => speech.start();
+speech.onnomatch = () => speech.stop();
+speech.onerror = ev => {
 	console.log(ev);
 	speech.stop();
-};
-speech.onnomatch = () => speech.stop();
-speech.onend = () => {
-	speech.stop();
-	speech.start();
 };
 
 document.addEventListener('DOMContentLoaded', () => {
 	const mainEl = document.querySelector('#main');
-	speech.onresult = event => {
-		const results = event.results;
+	speech.onresult = ev => {
+		const results = ev.results;
 		if (results[0] && results[0][0]) {
 			const said = results[0][0].transcript.trim();
 			console.log(said);
