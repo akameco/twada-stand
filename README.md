@@ -1,24 +1,30 @@
-# t-wada-stand
+# twada-stand
 
 > テスト書いてないとかお前それ@t-wadaの前で同じこと言えんの
 
 テストを書いてない書いてない人の前に例のスタンドが現れます。
 
+![screenshot](media/screenshot.gif)
+
+## Download
+
+GitHubの[リリースページ](https://github.com/akameco/twada-stand/releases) からダウンロード可能です。  
+
 ## Installation
 
 ```
 $ git clone git@github.com:akameco/twada-stand.git
+$ cd twada-stand
+$ npn install
 ```
 
 ## Usage
 
 ```
-$ npn install
 $ npm start
 ```
 
-デスクトップの前で、「テスト書いてない」と声に出してつぶやく。
-もしくは、OSXのユーザーの場合、`say`コマンドを実行できます。
+デスクトップの前で、「テスト書いてない」と声に出してつぶやくか、OSXのユーザーなら、`say`コマンドで確認できます。
 
 ```
 $ say テスト書いてない
