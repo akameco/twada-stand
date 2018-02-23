@@ -1,5 +1,7 @@
 # twada-stand
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/akameco/twada-stand.svg)](https://greenkeeper.io/)
+
 > テスト書いてないとかお前それ@t-wadaの前で同じこと言えんの
 
 テストを書いてない人の前に例のスタンドが現れます。
