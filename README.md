@@ -8,14 +8,14 @@
 
 ## Download
 
-GitHubの[リリースページ](https://github.com/akameco/twada-stand/releases) からダウンロード可能です。  
+GitHubの[リリースページ](https://github.com/akameco/twada-stand/releases) からダウンロード可能です。
 
 ## Installation
 
 ```
 $ git clone git@github.com:akameco/twada-stand.git
 $ cd twada-stand
-$ npn install
+$ npm install
 ```
 
 ## Usage
